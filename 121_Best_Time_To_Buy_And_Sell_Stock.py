@@ -13,9 +13,9 @@ class Solution(object):
 
         for price in prices:
             if price - buy > profit:
-                profit = price - buy
+                profit = price - buy   #profit = max(profit, price - buy)
             if price < buy:
-                buy = price
+                buy = price  #buy = min(buy, price) 
         return profit
 
 '''
