@@ -1,5 +1,11 @@
 #Question: Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
 #          A subarray is a contiguous non-empty sequence of elements within an array.
+'''
+Key decision:
+Use prefix sum + hash map to track running totals and efficiently detect subarrays that sum to k
+If the sum of a subarray nums[i...j] is k,
+then: prefix_sum[j] - prefix_sum[i - 1] = k
+'''
 
 class Solution(object):
     def subarraySum(self, nums, k):
@@ -24,9 +30,4 @@ class Solution(object):
         return count
             
 
-'''
-Key decision:
-Use prefix sum + hash map to track running totals and efficiently detect subarrays that sum to k
-If the sum of a subarray nums[i...j] is k,
-then: prefix_sum[j] - prefix_sum[i - 1] = k
-'''
+
