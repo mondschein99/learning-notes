@@ -21,8 +21,3 @@ class Solution(object):
             if price < buy:
                 buy = price  #buy = min(buy, price) 
         return profit
-
-'''
-Key decision:
-Keep tracking the minimum price
-'''
