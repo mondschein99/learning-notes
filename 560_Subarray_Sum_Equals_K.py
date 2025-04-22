@@ -19,7 +19,7 @@ class Solution(object):
             if sum_current in sum_pre:
                 sum_pre[sum_current] += 1
             else:
-                sum_pre[sum_current] = 1
+                sum_pre[sum_current] = 1   #sum_pre[sum_current] = sum_pre.get(sum_current, 0) + 1 (fetch sum_current in sum_pre, if not in, return 0)
         
         return count
             
