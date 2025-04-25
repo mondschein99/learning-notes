@@ -19,8 +19,20 @@ class Solution(object):
             triangle.append(row_curr)
         return triangle
 
-  #Sample code fron Leetcode
-  class Solution(object):
+#Modified Version
+class Solution(object):
+    def generate(self, numRows):
+      triangle = [[1] for i in range(numsRows)]
+      if numRows = 1:
+        return triangle
+      for i in range(numRows):
+        for j in range(i):
+          triange[i] += triange[i-1][j] +  triange[i-1][j-1] 
+        triangle[i] += 1
+      return triangle
+
+#Sample code fron Leetcode
+class Solution(object):
     def generate(self, numRows):
         """
         :type numRows: int
@@ -34,3 +46,6 @@ class Solution(object):
                 dfs[i]+= [dfs[i-1][j-1]+dfs[i-1][j]] #Add the element on ith row column by column
             dfs[i]+=[1] #Completement the last element on each line
         return dfs
+
+
+ 
