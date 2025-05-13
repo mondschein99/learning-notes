@@ -18,7 +18,7 @@ class Solution(object):
 
         return isMirror(root.left, root.right)
 
-  #BFS method
+#BFS method
 from collections import deque
 class Solution(object):
     def isSymmetric(self, root):
@@ -30,3 +30,24 @@ class Solution(object):
             queue.append((n1.left, n2.right))
             queue.append((n1.right, n2.left))
         return True 
+
+'''
+Study notes:
+Depth-First Search (DFS): Go as deep as possible before backtracking.
+Breadth-First Search (BFS): Visit the tree level by level, left to right.
+e.g: DFS algorithm
+ef inorder_traversal(node):
+    if not node:
+        return
+    inorder_traversal(node.left)
+    print(node.val)
+    inorder_traversal(node.right)
+running in the tree:
+       10
+      /  \
+     5    15
+    / \     \
+   3   7     20
+expected result:
+3 → 5 → 7 → 10 → 15 → 20
+'''
