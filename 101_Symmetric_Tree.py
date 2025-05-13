@@ -50,4 +50,34 @@ running in the tree:
    3   7     20
 expected result:
 3 → 5 → 7 → 10 → 15 → 20
+
+preorder sample:
+tree:
+       6
+      / \
+     2   9
+      \   \
+       4   12
+       
+class TreeNode:
+  def __init__(self, val = 0, left = None, right = None  ):
+    self.val = val
+    self.left = left
+    self.right = right
+root = TreeNode(6)
+root.left = TreeNode(2)
+root.right = TreeNode(9)
+root.left.right = TreeNode(4)
+root.right.right = TreeNode(12)
+
+def preorder_traversal(node):
+    if not node:
+        return
+    print(node.val)
+    preorder_traversal(node.left)
+    preorder_traversal(node.right)
+
+preorder_traversal(root)
+
+expected result: 6 → 2 → 4 → 9 → 12 
 '''
