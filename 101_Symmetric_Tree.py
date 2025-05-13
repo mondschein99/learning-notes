@@ -36,7 +36,7 @@ Study notes:
 Depth-First Search (DFS): Go as deep as possible before backtracking.
 Breadth-First Search (BFS): Visit the tree level by level, left to right.
 e.g: DFS algorithm
-ef inorder_traversal(node):
+def inorder_traversal(node):
     if not node:
         return
     inorder_traversal(node.left)
@@ -80,4 +80,17 @@ def preorder_traversal(node):
 preorder_traversal(root)
 
 expected result: 6 → 2 → 4 → 9 → 12 
+
+postorder sample:
+def postorder_traversal(node):
+    if not node:
+        return
+    postorder_traversal(node.left)
+    postorder_traversal(node.right)
+    print(node.val)
+
+postorder_traversal(root)
+
+expected result: 4 → 2 → 12 → 9 → 6
+
 '''
