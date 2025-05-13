@@ -26,3 +26,24 @@ class Solution(object):
         if p.val != q.val:
             return False
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+
+'''
+Study notes:
+Tree: A tree is a hierarchical data structure — kind of like a family tree or an organizational chart.
+      It consists of nodes, and each node can have children.
+
+A node is usually defined like this:
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val        # current value
+        self.left = left      # left child (TreeNode)
+        self.right = right    # right child (TreeNode)
+
+A tree can be built as:
+n4 = TreeNode(4)
+n5 = TreeNode(5)
+n2 = TreeNode(2, left=n4, right=n5)
+n3 = TreeNode(3)
+root = TreeNode(1, left=n2, right=n3)       
+'''
