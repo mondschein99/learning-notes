@@ -31,7 +31,30 @@ class Solution(object):
                         queue.append(node.right)
         return count
 
-#DFS method
+#DFS method: postorder 
+class Solution(object):
+    def maxDepth(self, root):
+        count = 0
+        if not root:
+            return count
+        def postorder_traversal(node):
+            if not node:
+                return 0
+            c1 = postorder_traversal(node.left)
+            c2 = postorder_traversal(node.right)
+            return max(c1, c2) + 1
+        count = postorder_traversal(root)
+        return count
+
+'''
+notes: this problem can be regarded in two ways
+1. the maximum depth is exact the number of levels, hence using BFS to count is available
+2. using DFS to see exactly how deep the tree is then accumulate each time.
+'''
+    
+
+
+
 
 
 
