@@ -1,5 +1,12 @@
 #Question: A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
+'''
+key notes: 
+this problem can be regarded in two ways:
+1. the maximum depth is exact the number of levels, hence using BFS to count is available
+2. using DFS to see exactly how deep the tree is then accumulate each time.
+'''
+
 #BFS method
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -46,11 +53,7 @@ class Solution(object):
         count = postorder_traversal(root)
         return count
 
-'''
-notes: this problem can be regarded in two ways
-1. the maximum depth is exact the number of levels, hence using BFS to count is available
-2. using DFS to see exactly how deep the tree is then accumulate each time.
-'''
+
     
 
 
