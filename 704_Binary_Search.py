@@ -3,7 +3,7 @@
 #           You must write an algorithm with O(log n) runtime complexity.
 
 
-'''Solution'''
+#Original version
 class Solution(object):
     def search(self, nums, target):
         """
